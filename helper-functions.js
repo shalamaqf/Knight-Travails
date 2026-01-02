@@ -75,3 +75,30 @@ function constructPath(targetedPosition, startPosition, arrayPairs) {
     // Return the path in reverse order
     return path.reverse();
 }
+
+// Create a function to generate unvisited positions
+function generateUnvisitedPositions(arrayPositions, arrayVisited) {
+    // Create an array to store unvisited positions
+    const unvisitedPositions = [];
+
+    // Create a variable to store the length of visited array
+    const length = arrayVisited.length;
+
+    // Loop to check each position is visited or not
+    arrayPositions.forEach(position => {
+        // Create a variable to mark visited
+        let visited = false;
+
+        for (let i = 0; i < length; i++) {
+            if (position[0] === arrayVisited[i][0] && position[1] === arrayVisited[i][1]) {
+                visited = true;
+                break;
+            }
+        }
+
+        if (visited === false) unvisitedPositions.push(position);
+    });
+
+    // Return the array of unvisited positions
+    return unvisitedPositions;
+}
