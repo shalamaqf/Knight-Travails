@@ -1,5 +1,5 @@
 // Create a function to generate next possible positions
-function generatePositions(startPosition) {
+export function generatePositions(startPosition) {
     // Create an array for store the possible positions
     const possiblePositions = [];
     
@@ -41,7 +41,7 @@ function isOutOfBoard(position) {
 }
 
 // Create a function to create a new pair of child and its parent
-function createNewPair(arrayPositions, parentPosition, arrayPairs) {
+export function createNewPair(arrayPositions, parentPosition, arrayPairs) {
     arrayPositions.forEach(position => {
         const pair = [position, parentPosition];
         arrayPairs.push(pair);
@@ -49,7 +49,7 @@ function createNewPair(arrayPositions, parentPosition, arrayPairs) {
 }
 
 // Create a function to construct the path
-function constructPath(targetedPosition, startPosition, arrayPairs) {
+export function constructPath(targetedPosition, startPosition, arrayPairs) {
     // Create an array for path
     const path = [targetedPosition];
 
@@ -79,7 +79,7 @@ function constructPath(targetedPosition, startPosition, arrayPairs) {
 }
 
 // Create a function to generate unvisited positions
-function generateUnvisitedPositions(arrayPositions, arrayVisited) {
+export function generateUnvisitedPositions(arrayPositions, arrayVisited) {
     // Create an array to store unvisited positions
     const unvisitedPositions = [];
 
