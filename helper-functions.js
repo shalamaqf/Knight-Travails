@@ -45,3 +45,30 @@ function createNewPair(position, parentPosition, arrayPairs) {
     const pair = [position, parentPosition];
     arrayPairs.push(pair);
 }
+
+// Create a function to construct the path
+function constructPath(targetedPosition, startPosition, arrayPairs) {
+    // Create an array for path
+    const path = [targetedPosition];
+
+    // Create a variable to store the length of the array of pairs
+    const length = arrayPairs.length;
+
+    // Create a variable to track the current position
+    let current = targetedPosition;
+
+    // Loop through the array of pairs till reach the start position
+    while ((current[0] !== startPosition[0]) || current[1] !== startPosition[1]) {
+        // Look for the parent
+        for (let i = 0; i < length; i++) {
+            if (current[0] === arrayPairs[i][0][0] && current[1] === arrayPairs[i][0][1]) { 
+                path.push(arrayPairs[i][1]);
+                current = arrayPairs[i][1];
+                break;
+            }
+        }
+    }
+
+    // Return the path in reverse order
+    return path.reverse();
+}
