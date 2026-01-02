@@ -39,3 +39,9 @@ function isOutOfBoard(position) {
         }
     return false;
 }
+
+// Create a function to create a new pair of child and its parent
+function createNewPair(position, parentPosition, arrayPairs) {
+    const pair = [position, parentPosition];
+    arrayPairs.push(pair);
+}
