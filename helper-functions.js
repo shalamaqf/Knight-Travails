@@ -41,9 +41,11 @@ function isOutOfBoard(position) {
 }
 
 // Create a function to create a new pair of child and its parent
-function createNewPair(position, parentPosition, arrayPairs) {
-    const pair = [position, parentPosition];
-    arrayPairs.push(pair);
+function createNewPair(arrayPositions, parentPosition, arrayPairs) {
+    arrayPositions.forEach(position => {
+        const pair = [position, parentPosition];
+        arrayPairs.push(pair);
+    });
 }
 
 // Create a function to construct the path
