@@ -108,3 +108,9 @@ export function markVisited(unvisitedArray, visitedArray) {
         visitedArray.push(position);
     });
 }
+
+// Create a function to display the shortest path
+function displayShortestPath(path) {
+    const length = path.length - 1;
+    return console.log(`You made it in ${length} moves! Here's your path: ${path}`);
+}
