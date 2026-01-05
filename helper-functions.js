@@ -71,8 +71,11 @@ export function constructPath(targetedPosition, startPosition, arrayPairs) {
         }
     }
 
-    // Return the path in reverse order
-    return path.reverse();
+    // Reverse the path
+    const shortestPath = path.reverse();
+
+    // Return the shortest path
+    return displayShortestPath(shortestPath);
 }
 
 // Create a function to generate unvisited positions
