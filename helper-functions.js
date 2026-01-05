@@ -104,3 +104,10 @@ export function generateUnvisitedPositions(arrayPositions, arrayVisited) {
     // Return the array of unvisited positions
     return unvisitedPositions;
 }
+
+// Create a function to push discovered positions in to the visited array
+function markVisited(unvisitedArray, visitedArray) {
+    unvisitedArray.forEach(position => {
+        visitedArray.push(position);
+    });
+}
