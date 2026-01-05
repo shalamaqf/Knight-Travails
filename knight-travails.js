@@ -6,7 +6,7 @@ import { generatePositions,
 
 
 // Create a function to generate shortest path of knight moves
-function knightMoves(startPosition, targetedPosition) {
+export function knightMoves(startPosition, targetedPosition) {
     // Check if the start position is equal to targeted position
     if (startPosition[0] === targetedPosition[0] && startPosition[1] === targetedPosition[1]) return startPosition;
 

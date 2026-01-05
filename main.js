@@ -1,0 +1,1 @@
+import { knightMoves } from "./knight-travails.js";
