@@ -115,5 +115,10 @@ export function markVisited(unvisitedArray, visitedArray) {
 // Create a function to display the shortest path
 function displayShortestPath(path) {
     const length = path.length - 1;
-    return console.log(`You made it in ${length} moves! Here's your path: ${path}`);
+
+    // Format the path to be array format in the string literal
+    const formattedPath = path 
+        .map(pos => `[${pos[0]},${pos[1]}]`)
+        .join('\n');
+    return console.log(`You made it in ${length} moves! Here's your path: \n${formattedPath}`);
 }
