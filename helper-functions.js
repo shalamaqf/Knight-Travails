@@ -71,9 +71,6 @@ export function constructPath(targetedPosition, startPosition, arrayPairs) {
         }
     }
 
-    // Put the start position to the array
-    path.push(startPosition);
-
     // Return the path in reverse order
     return path.reverse();
 }
